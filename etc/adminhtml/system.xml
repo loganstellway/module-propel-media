@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="propelmedia" translate="label" sortOrder="200">
+            <label>Propel Media</label>
+        </tab>
+        <section id="propelmedia" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Propel Media Tracking</label>
+            <tab>propelmedia</tab>
+            <resource>LoganStellway_PropelMedia::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+            </group>
+            <group id="campaigns" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Campaigns</label>
+                <field id="params" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Token Parameters</label>
+                    <comment>Open parameters containing the identifying token defined in Propel Media campaigns</comment>
+                    <frontend_model>LoganStellway\PropelMedia\Block\System\Config\Form\Field\TokenParameters</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                </field>
+            </group>
+            <group id="reporting" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Reporting</label>
+                <field id="base_url" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Base URL</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Baseurl</backend_model>
+                </field>
+                <field id="params" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Parameters</label>
+                    <comment>Parameters sent to Propel Media server to report conversions</comment>
+                    <frontend_model>LoganStellway\PropelMedia\Block\System\Config\Form\Field\ReportingParameters</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

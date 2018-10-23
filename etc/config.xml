@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <propelmedia>
+            <campaigns>
+                <params>{"_1539973844469_469":{"name":"token"}}</params>
+            </campaigns>
+            <reporting>
+                <base_url>https://tracking.propelmedia.com/</base_url>
+                <params>{"_1539973845991_991":{"name":"token","value":"{token}"},"_1539973860997_997":{"name":"value","value":"{value}"},"_1539973865013_13":{"name":"id","value":""}}</params>
+            </reporting>
+        </propelmedia>
+    </default>
+</config>
